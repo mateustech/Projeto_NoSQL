@@ -4,6 +4,5 @@ const Dashboard = require('./controllers/controllers')
 
 
 routes.get('/', Dashboard.index)
-routes.post('/', Dashboard.store)
 
 module.exports = routes
