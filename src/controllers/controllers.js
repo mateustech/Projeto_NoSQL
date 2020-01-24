@@ -7,7 +7,10 @@ class Dashboard {
     const dados = await Dash.find({}, { Indicador: 1, areacol: 1 }).sort('-areacol').limit(10)
     return res.status(200).json(dados)
   }
-
+  async indexT(req, res) {
+    const dados = await Dash.find()
+    return res.status(200).json(dados)
+  }
 }
 
 module.exports = new Dashboard()
