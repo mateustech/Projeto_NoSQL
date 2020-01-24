@@ -1,8 +1,8 @@
 const app = require('./server');
 const routes = require('./routes');
-const config = require('./config/geral');
 
 app.use(routes);
-app.listen(config.PORT, () => {
-  console.log(`APi rodando na porta ${config.PORT}`);
+const PORTA = process.env.POT || 3333
+app.listen(PORTA, () => {
+  console.log(`APi rodando na porta ${PORTA}`);
 });

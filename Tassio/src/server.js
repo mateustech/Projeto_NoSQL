@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const config = require('./config/geral');
 
 
 class App {
@@ -18,7 +17,7 @@ class App {
   }
 
   connect() {
-    mongoose.connect(config.CONNECT, {
+    mongoose.connect('mongodb+srv://tassio:adidasrebook357@cluster0-hytre.mongodb.net/dash?retryWrites=true&w=majority', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
