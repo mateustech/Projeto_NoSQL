@@ -1,4 +1,4 @@
 module.exports = {
   PORT: 3333,
-  CONNECT: 'mongodb+srv://Heltonphg:frede1618@@@cluster0-xsq9z.mongodb.net/test?retryWrites=true&w=majority'
+  CONNECT: 'mongodb+srv://tassio:adidasrebook357@cluster0-hytre.mongodb.net/dash?retryWrites=true&w=majority'
 }

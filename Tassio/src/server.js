@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./config/geral');
 
+
 class App {
 
   constructor() {
