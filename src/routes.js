@@ -1,38 +1,32 @@
 const express = require('express')
 const routes = express.Router()
+
 const Brpm = require('./controllers/brpm')
 const Brtemp = require('./controllers/brtemp')
+const Agriesttt = require('./controllers/agriesttt')
 
-//Dados Permanentes
+//TODO:Dados Permanentes
 routes.get('/areacol/brpm', Brpm.areacol)
-routes.get('/qtdprod/brpm', Brpm.qtdprod)
+// routes.get('/qtdprod/brpm', Brpm.qtdprod)
 routes.get('/numest/brpm', Brpm.numest)
 routes.get('/valorprod/brpm', Brpm.valorprod)
-routes.get('/qtdprod/brpmA', Brpm.qtdprodA)
+// routes.get('/qtdprod/brpmA', Brpm.qtdprodA)
 
-//Dados Temporarios
-routes.get('/qtdprod/brtemp', Brtemp.qtdprodT)
+//TODO: Dados Temporarios
+// routes.get('/qtdprod/brtemp', Brtemp.qtdprodT)
 routes.get('/numest/brtemp', Brtemp.numestT)
 routes.get('/valorprod/brtemp', Brtemp.valorprodT)
 routes.get('/areacol/brtemp', Brtemp.areacolT)
-routes.get('/qtdprod/brtempA', Brtemp.qtdprodA)
+// routes.get('/qtdprod/brtempA', Brtemp.qtdprodA)
 
+//TODO: Dados por estados Permanentes
+routes.get('/numest/estpm', Agriesttt.numest)
+routes.get('/valorprod/estpm', Agriesttt.valorprod)
+routes.get('/areacol/estpm', Agriesttt.areacol)
 
-
-
-
-// db.agriesttt.find({ Indicador: "Lavoura permanente" }, { _id: 0, estado: 1, numest: 1 })
-//   / numestestpm
-// db.agriesttt.find({ Indicador: "Lavoura permanente" }, { _id: 0, estado: 1, valorprod: 1 })
-//   / valorprodestpm
-// db.agriesttt.find({ Indicador: "Lavoura permanente" }, { _id: 0, estado: 1, areacol: 1 })
-//   / areacolestpm
-// db.agriesttt.find({ Indicador: "Lavoura temporária" }, { _id: 0, estado: 1, numest: 1 })
-//   / numestesttemp
-// db.agriesttt.find({ Indicador: "Lavoura temporária" }, { _id: 0, estado: 1, valorprod: 1 })
-//   / valorprodesttemp
-// db.agriesttt.find({ Indicador: "Lavoura temporária" }, { _id: 0, estado: 1, areacol: 1 })
-//   / areacolesttemp
-
+//TODO: Dados por estados Temporarios
+routes.get('/numest/esttemp', Agriesttt.numestEST)
+routes.get('/valorprod/esttemp', Agriesttt.valorprodEST)
+routes.get('/areacol/esttemp', Agriesttt.areacolEST)
 
 module.exports = routes
