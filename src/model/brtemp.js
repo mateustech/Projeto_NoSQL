@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const Dash = new mongoose.Schema({
+const Brtemp = new mongoose.Schema({
   Indicador: String,
   numest: Number,
   qtdprod: Number,
@@ -12,8 +12,8 @@ const Dash = new mongoose.Schema({
   undvalorprod: String
 }, {
   timestamps: true,
-  collection: 'agribrpm'
+  collection: 'agribrtemp'
 })
 
 
-module.exports = mongoose.model('dashboard', Dash)
+module.exports = mongoose.model('brtemp', Brtemp)
