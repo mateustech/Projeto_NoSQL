@@ -7,7 +7,7 @@ const Agriesttt = require('./controllers/agriesttt')
 
 //TODO: ROTA PARA TESTE DE DISPONIBILIDADE DA API
 routes.get('/', (req, res) => {
-  return res.send('<h1>Ola, Esta API Esta Funcionando Com Sucesso!</h1>')
+  return res.status(200).send('<h1>Ola, Esta API Esta Funcionando Com Sucesso!</h1>')
 })
 //TODO:Dados Permanentes
 routes.get('/areacol/brpm', Brpm.areacol)
