@@ -24,6 +24,11 @@ class BrtempControllers {
     return res.status(200).json(data)
   }
 
+  async todosdados(req, res) {
+    const data = await Brtemp.find()
+    return res.status(200).json(data)
+  }
+
 
 }
 
