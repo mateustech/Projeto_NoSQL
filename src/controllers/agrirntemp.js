@@ -18,6 +18,11 @@ class AgrirntempControllers {
     return res.json(data)
   }
 
+  async todosdados(req, res) {
+    const data = await Agrirntemp.find()
+    return res.json(data)
+  }
+
 }
 
 module.exports = new AgrirntempControllers()

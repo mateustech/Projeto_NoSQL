@@ -6,6 +6,7 @@ const Brtemp = require('./controllers/brtemp')
 const Agriesttt = require('./controllers/agriesttt')
 const Agrirnppm = require('./controllers/agrirnppm')
 const Agrirntemp = require('./controllers/agrirntemp')
+const Agricidrntt = require('./controllers/agricidrntt')
 
 //TODO: ROTA PARA TESTE DE DISPONIBILIDADE DA API
 routes.get('/', (req, res) => {
@@ -41,10 +42,22 @@ routes.get('/areacol/esttemp', Agriesttt.areacolEST)
 routes.get('/numest/arrnpm', Agrirnppm.numestrnpm)
 routes.get('/areacol/arrnpm', Agrirnppm.areacolrnpm)
 routes.get('/valorprod/arrnpm', Agrirnppm.valorprodrnpm)
+routes.get('/tudo/arrnpm', Agrirnppm.todosdados)
+
+// Cidades
+routes.get('/numest/cidrntt', Agricidrntt.numestcid)
+routes.get('/areacol/cidrntt', Agricidrntt.areacolcid)
+routes.get('/valorprod/cidrntt', Agricidrntt.valorprodcid)
+
 
 //Graficos temporarios do RN
 routes.get('/numest/arrntemp', Agrirntemp.numestrntemp)
 routes.get('/areacol/arrntemp', Agrirntemp.areacolrntemp)
 routes.get('/valorprod/arrntemp', Agrirntemp.valorprodrntemp)
+routes.get('/tudo/arrntemp', Agrirntemp.todosdados)
 
+//Cidades
+routes.get('/numest/cidrntttemp', Agricidrntt.numestcidtemp)
+routes.get('/areacol/cidrntttemp', Agricidrntt.areacolcidtemp)
+routes.get('/valorprod/cidrntttemp', Agricidrntt.valorprodcidtemp)
 module.exports = routes

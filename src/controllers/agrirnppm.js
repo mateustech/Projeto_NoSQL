@@ -18,6 +18,11 @@ class AgrirnppmControllers {
     return res.json(data)
   }
 
+  async todosdados(req, res) {
+    const data = await Agrirnppm.find()
+    return res.json(data)
+  }
+
 }
 
 module.exports = new AgrirnppmControllers()
